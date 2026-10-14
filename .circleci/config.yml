@@ -26,6 +26,9 @@ jobs:
       - run: npm run test
       - run: npm run build
 
+      # audit dependencies for known vulnerabilities
+      - run: npm audit || true
+
 workflows:
   node-tests:
     jobs:
