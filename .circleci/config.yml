@@ -22,6 +22,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      # fail the build if the code doesn't match the lint style
       - run: npm run lint
 
       # run tests!
