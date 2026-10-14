@@ -86,6 +86,14 @@ export const CalculatorPage: React.FC<Props> = (props: Props) => {
             <Button variant="contained" disabled={result === 0} onClick={handleReset}>
               Reset
             </Button>
+            <Button
+              variant="contained"
+              onClick={() => {
+                throw new Error("This is your first error!");
+              }}
+            >
+              Break the world
+            </Button>
           </div>
         </div>
         <div className={classes.lateralBar}>
